@@ -2,4 +2,18 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+    <div class="text-center">
+
+        <form asp-controller="Home" asp-action="RegistroPromocao" method="post">
+
+            <input name="produto" class="form-control form-control-lg" type="text" placeholder="Categoria do Produto">
+            <input name="nome_promocao" class="form-control form-control-lg" type="text" placeholder="Nome da Promoção" />
+            <input name="dt_inico" class="form-control form-control-lg" type="date" placeholder="Data de Inico" />
+            <input name="dt_final" class="form-control form-control-lg" type="date" placeholder="Data de Termino" />
+
+
+            <button type="submit">Cadastrar</button>
+        </form>
+
+    </div>
 }

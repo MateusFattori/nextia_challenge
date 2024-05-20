@@ -12,7 +12,7 @@ using nextia_challenge.Data;
 namespace nextia_challenge.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240520220215_initial")]
+    [Migration("20240520232023_initial")]
     partial class initial
     {
         /// <inheritdoc />
@@ -38,7 +38,7 @@ namespace nextia_challenge.Migrations
                         .HasColumnType("NVARCHAR2(2000)");
 
                     b.Property<DateTime>("dt_nascimento")
-                        .HasColumnType("TIMESTAMP(7)");
+                        .HasColumnType("DATE");
 
                     b.Property<string>("email")
                         .IsRequired()
@@ -98,10 +98,10 @@ namespace nextia_challenge.Migrations
                     OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("dt_final")
-                        .HasColumnType("TIMESTAMP(7)");
+                        .HasColumnType("DATE");
 
                     b.Property<DateTime>("dt_inicio")
-                        .HasColumnType("TIMESTAMP(7)");
+                        .HasColumnType("DATE");
 
                     b.Property<string>("nome_promocao")
                         .IsRequired()

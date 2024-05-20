@@ -1,0 +1,35 @@
+﻿@model IEnumerable<nextia_challenge.Models.Cliente>
+
+@{
+    ViewData["Title"] = "Clientes Cadastrados";
+}
+
+<h2>Clientes Cadastrados</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>Email</th>
+            <th>Gênero</th>
+            <th>Data de Nascimento</th>
+            <th>Telefone</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cliente in Model)
+        {
+            <tr>
+                <td>@cliente.Id</td>
+                <td>@cliente.nome</td>
+                <td>@cliente.cpf</td>
+                <td>@cliente.email</td>
+                <td>@cliente.genero</td>
+                <td>@cliente.dt_nascimento.ToString("yyyy-MM-dd")</td>
+                <td>@cliente.telefone</td>
+            </tr>
+        }
+    </tbody>
+</table>

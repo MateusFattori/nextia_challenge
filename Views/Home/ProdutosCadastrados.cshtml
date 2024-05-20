@@ -1,0 +1,29 @@
+﻿@model IEnumerable<nextia_challenge.Models.Produto>
+
+@{
+    ViewData["Title"] = "Produtos Cadastrados";
+}
+
+<h2>Produtos Cadastrados</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Categoria</th>
+            <th>Valor</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var produto in Model)
+        {
+            <tr>
+                <td>@produto.Id</td>
+                <td>@produto.nome</td>
+                <td>@produto.categoria</td>
+                <td>@produto.valor.ToString("C2")</td>
+            </tr>
+        }
+    </tbody>
+</table>

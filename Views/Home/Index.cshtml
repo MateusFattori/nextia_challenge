@@ -4,15 +4,15 @@
 
 <div class="text-center">
 
-    <form asp-controller="Home" asp-action="Register" method="post">
+    <form asp-controller="Home" asp-action="RegistroCliente" method="post">
 
-        <input name="nome" class="form-control form-control-lg" type="text" placeholder="nome">
-        <input name="cpf" class="form-control form-control-lg" type="text" placeholder="cpf" />
-        <input name="email" class="form-control form-control-lg" type="text" placeholder="email" />
-        <input name="senha" type="password" id="inputPassword5" class="form-control form-control-lg" aria-describedby="passwordHelpBlock" placeholder="senha">
-        <input name="genero" class="form-control form-control-lg" type="text" placeholder="generpo" />
-        <input name="dt_nascimento" class="form-control form-control-lg" type="text" placeholder="Data de Nascimento" />
-        <input name="telefone" class="form-control form-control-lg" type="text" placeholder="telefone" />
+        <input name="nome" class="form-control form-control-lg" type="text" placeholder="Nome">
+        <input name="cpf" class="form-control form-control-lg" type="text" placeholder="CPF" />
+        <input name="email" class="form-control form-control-lg" type="text" placeholder="Email" />
+        <input name="senha" type="password" id="inputPassword5" class="form-control form-control-lg" aria-describedby="passwordHelpBlock" placeholder="Senha">
+        <input name="genero" class="form-control form-control-lg" type="text" placeholder="Genero" />
+        <input name="dt_nascimento" class="form-control form-control-lg" type="date" placeholder="Data de Nascimento" />
+        <input name="telefone" class="form-control form-control-lg" type="tel" placeholder="Telefone" />
         
 
         <button type="submit">Cadastrar</button>

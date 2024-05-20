@@ -21,7 +21,16 @@ namespace nextia_challenge.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Produto()
+        {
+            return View();
+        }
+
+        public IActionResult Promocao()
+        {
+            return View();
+        }
+        public IActionResult Clientes()
         {
             return View();
         }
@@ -69,13 +78,12 @@ namespace nextia_challenge.Controllers
             return View();
         }
 
-        public IActionResult Promocao(Promocao request)
-        {
+        public IActionResult RegistroPromocao(Promocao request) 
+        { 
             var promocao = _dataContext.MVC_Promocoes.FirstOrDefault(x => x.produto == request.nome_promocao);
-
             if (promocao != null)
             {
-                return BadRequest("Promocao já existe");
+                return BadRequest("Promoção já existe");
             }
             Promocao newPromocao = new Promocao
             {
@@ -89,6 +97,25 @@ namespace nextia_challenge.Controllers
             _dataContext.SaveChanges();
             return View();
         }
+        public IActionResult ClientesCadastrados()
+        {
+            List<Cliente> clientes = _dataContext.MVC_Clientes.ToList();
+            return View("ClientesCadastrados", clientes);
+        }
+
+        public IActionResult ProdutosCadastrados()
+        {
+            List<Produto> produtos = _dataContext.MVC_Produtos.ToList();
+            return View("ProdutosCadastrados", produtos);
+        }
+
+
+        public IActionResult PromocoesCadastradas()
+        {
+            List<Promocao> promocoes = _dataContext.MVC_Promocoes.ToList();
+            return View("PromocoesCadastradas", promocoes);
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

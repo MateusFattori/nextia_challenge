@@ -22,7 +22,7 @@ namespace nextia_challenge.Migrations
                     email = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false),
                     senha = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false),
                     genero = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false),
-                    dt_nascimento = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false),
+                    dt_nascimento = table.Column<DateTime>(type: "DATE", nullable: false),
                     telefone = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false)
                 },
                 constraints: table =>
@@ -53,8 +53,8 @@ namespace nextia_challenge.Migrations
                         .Annotation("Oracle:Identity", "START WITH 1 INCREMENT BY 1"),
                     produto = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false),
                     nome_promocao = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false),
-                    dt_inicio = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false),
-                    dt_final = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false)
+                    dt_inicio = table.Column<DateTime>(type: "DATE", nullable: false),
+                    dt_final = table.Column<DateTime>(type: "DATE", nullable: false)
                 },
                 constraints: table =>
                 {

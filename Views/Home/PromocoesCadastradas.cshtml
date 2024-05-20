@@ -1,0 +1,31 @@
+﻿@model IEnumerable<nextia_challenge.Models.Promocao>
+
+@{
+    ViewData["Title"] = "Promoções Cadastradas";
+}
+
+<h2>Promoções Cadastradas</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Produto</th>
+            <th>Nome da Promoção</th>
+            <th>Data de Início</th>
+            <th>Data Final</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var promocao in Model)
+        {
+            <tr>
+                <td>@promocao.Id</td>
+                <td>@promocao.produto</td>
+                <td>@promocao.nome_promocao</td>
+                <td>@promocao.dt_inicio.ToString("yyyy-MM-dd")</td>
+                <td>@promocao.dt_final.ToString("yyyy-MM-dd")</td>
+            </tr>
+        }
+    </tbody>
+</table>
