@@ -9,10 +9,10 @@ namespace nextia_challenge.Data
         {
         }
 
-        public DbSet<Cliente> MVC_Clientes { get; set; }
+        public DbSet<Coral> MVC_Clientes { get; set; }
 
-        public DbSet<Produto> MVC_Produtos { get; set; }
+        public DbSet<Projeto> MVC_Produtos { get; set; }
 
-        public DbSet<Promocao> MVC_Promocoes { get; set; }
+        public DbSet<Localizacao> MVC_Promocoes { get; set; }
     }
 }

@@ -35,14 +35,14 @@ namespace nextia_challenge.Controllers
             return View();
         }
 
-        public IActionResult RegistroCliente(Cliente request)
+        public IActionResult RegistroCliente(Coral request)
         {
             var cliente = _dataContext.MVC_Clientes.FirstOrDefault(x => x.nome == request.cpf);
             if (cliente != null)
             {
                 return BadRequest("Cliente já existe");
             }
-            Cliente newCliente = new Cliente
+            Coral newCliente = new Coral
             {
                 Id = request.Id,
                 nome = request.nome,
@@ -58,7 +58,7 @@ namespace nextia_challenge.Controllers
             return View();
         }
 
-        public IActionResult RegistroProduto(Produto request)
+        public IActionResult RegistroProduto(Projeto request)
         {
             var produto = _dataContext.MVC_Produtos.FirstOrDefault(x => x.nome == request.categoria);
 
@@ -66,7 +66,7 @@ namespace nextia_challenge.Controllers
             {
                 return BadRequest("Produto já existe");
             }
-            Produto newProduto = new Produto
+            Projeto newProduto = new Projeto
             {
                 Id = request.Id,
                 nome = request.nome,
@@ -78,14 +78,14 @@ namespace nextia_challenge.Controllers
             return View();
         }
 
-        public IActionResult RegistroPromocao(Promocao request) 
+        public IActionResult RegistroPromocao(Localizacao request) 
         { 
             var promocao = _dataContext.MVC_Promocoes.FirstOrDefault(x => x.produto == request.nome_promocao);
             if (promocao != null)
             {
                 return BadRequest("Promoção já existe");
             }
-            Promocao newPromocao = new Promocao
+            Localizacao newPromocao = new Localizacao
             {
                 Id = request.Id,
                 produto = request.produto,
@@ -99,20 +99,20 @@ namespace nextia_challenge.Controllers
         }
         public IActionResult ClientesCadastrados()
         {
-            List<Cliente> clientes = _dataContext.MVC_Clientes.ToList();
+            List<Coral> clientes = _dataContext.MVC_Clientes.ToList();
             return View("ClientesCadastrados", clientes);
         }
 
         public IActionResult ProdutosCadastrados()
         {
-            List<Produto> produtos = _dataContext.MVC_Produtos.ToList();
+            List<Projeto> produtos = _dataContext.MVC_Produtos.ToList();
             return View("ProdutosCadastrados", produtos);
         }
 
 
         public IActionResult PromocoesCadastradas()
         {
-            List<Promocao> promocoes = _dataContext.MVC_Promocoes.ToList();
+            List<Localizacao> promocoes = _dataContext.MVC_Promocoes.ToList();
             return View("PromocoesCadastradas", promocoes);
         }
 

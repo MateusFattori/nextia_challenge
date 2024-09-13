@@ -20,7 +20,7 @@ namespace nextia_challenge.Controllers
             return View();
         }
 
-        public IActionResult Login(Cliente request)
+        public IActionResult Login(Coral request)
         {
             var cliente = _dataContext.MVC_Clientes.FirstOrDefault(x => x.nome == request.cpf);
             if (cliente == null)
