@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("nextia_challenge")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dbbbac3d9a206c823d0b1e931f761c2948859436")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+659ff10fa0388d459dea01d319ad3f6508bb0377")]
 [assembly: System.Reflection.AssemblyProductAttribute("nextia_challenge")]
 [assembly: System.Reflection.AssemblyTitleAttribute("nextia_challenge")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
